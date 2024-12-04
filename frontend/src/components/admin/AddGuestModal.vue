@@ -22,19 +22,10 @@
 
         <div class="form-group">
           <label for="price">Price of per guest (₱)</label>
-          <input
-            type="number"
-            id="price"
-            v-model="formData.price"
-            required
-            min="0"
-            step="0.01"
-            placeholder="Enter price"
-          />
+          <input type="number" id="price" v-model="formData.price" required min="0" step="0.01" placeholder="Enter price" />
         </div>
 
         <div class="form-actions">
-          <!-- <button type="button" class="cancel-btn" @click="$emit('close')">Cancel</button> -->
           <button type="submit" class="submit-btn" :disabled="isSubmitting">
             <i class="fas fa-spinner fa-spin" v-if="isSubmitting"></i>
             {{ isSubmitting ? 'Adding...' : 'Add Guest Limitations' }}
